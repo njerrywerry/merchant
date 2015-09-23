@@ -30,6 +30,14 @@
   <td><%= print_price item.subtotal %></td>
   </tr>
   <% end %>
+
+  <tr>
+    <th>Order Total</th>
+  </tr>
+  <tr>
+    <th><%= print_price @order.total %></th>
+  </tr>
+
 </table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
