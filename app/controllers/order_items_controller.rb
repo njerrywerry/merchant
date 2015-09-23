@@ -51,7 +51,7 @@ class OrderItemsController < ApplicationController
 
   def load_order
     begin
-    @order = Order.where(id: session[:order_id]).first_or_initialize
+    @order = Order.where(id: session[:order_id], status: "unsubmitted").first_or_initialize
     if @order.new_record?
       @order.save!
       session[:order_id] = @order.id

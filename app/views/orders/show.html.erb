@@ -27,7 +27,7 @@
   <td><%= item.product.title %></td>
   <td><%= item.quantity %></td>
   <td><%= print_price(item.product.price) %></td>
-  <td></td>
+  <td><%= print_price item.subtotal %></td>
   </tr>
   <% end %>
 </table>
