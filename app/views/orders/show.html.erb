@@ -28,6 +28,7 @@
   <td><%= item.quantity %></td>
   <td><%= print_price(item.product.price) %></td>
   <td><%= print_price item.subtotal %></td>
+  <td><%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
   <% end %>
 
