@@ -43,3 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+#use OmniAuth for authorization
+gem "omniauth-twitter"
