@@ -46,7 +46,7 @@
   <th>Shipping To:</th>
   <td>
     <%= f.select :address_id, current_user.addresses.collect{|a| [a.to_s, a.id]} %>
-    (add an address link)
+    <%= link_to "Add Other Address", new_address_path %>
   </td>
 </tr>
 
