@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1>Your Order</h1>
 
+<%= form_for @order do |f| %>
 <table>
   <tr>
     <th>Customer</th>
@@ -41,7 +42,16 @@
     <th><%= print_price @order.total %></th>
   </tr>
 
+  <tr>
+  <th>Shipping To:</th>
+  <td>
+    <%= f.select :address_id, current_user.addresses.collect{|a| [a.to_s, a.id]} %>
+    (add an address link)
+  </td>
+</tr>
+
 </table>
+<% end %>
 <%= link_to "Empty Cart", @order, data: { confirm: 'Are you sure?' }, method: :delete %>
 
 <br>
