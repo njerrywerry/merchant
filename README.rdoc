@@ -1,8 +1,11 @@
 == README
 
-A Ruby on Rails e-commerce site.
+A Ruby on Rails e-commerce site for selling groceries online 
 
 * Ruby version 2.2.2
 
 * Rails version 4.2.1
+
+* Postgres DB
+
 
