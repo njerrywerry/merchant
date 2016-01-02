@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :addresses
-  resources :orders
+  resources :orders do
+    member do
+      get :confirm
+    end
+  end
   resources :order_items
   root to: 'products#index'
   resources :products

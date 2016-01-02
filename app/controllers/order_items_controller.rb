@@ -2,6 +2,22 @@ class OrderItemsController < ApplicationController
   before_action :load_order, only: [:create]
   before_action :set_order_item, only: [:show, :edit, :destroy]
 
+  # GET /order_items
+  # GET /order_items.json
+  def index
+    @order_items = OrderItem.all
+  end
+
+  # GET /order_items/1
+  # GET /order_items/1.json
+  def show
+  end
+
+  # GET /order_items/new
+  def new
+    @order_item = OrderItem.new
+  end
+
   # GET /order_items/1/edit
   def edit
   end
